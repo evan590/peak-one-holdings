@@ -1,5 +1,42 @@
 import { useEffect, useState } from 'react'
 
+// Icon components
+const NetworkIcon = () => (
+  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+  </svg>
+)
+
+const TargetIcon = () => (
+  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 12m-9 0a9 9 0 1018 0 9 9 0 10-18 0M12 12m-5 0a5 5 0 1010 0 5 5 0 10-10 0M12 12m-1 0a1 1 0 102 0 1 1 0 10-2 0" />
+  </svg>
+)
+
+const ChartIcon = () => (
+  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+  </svg>
+)
+
+const ShieldIcon = () => (
+  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+  </svg>
+)
+
+const UserIcon = () => (
+  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+  </svg>
+)
+
+const HandshakeIcon = () => (
+  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 01.198-.471 1.575 1.575 0 10-2.228-2.228 3.818 3.818 0 00-1.12 2.687M6.9 7.575V12m6.27 4.318A4.49 4.49 0 0116.35 15m.002 0h-.002" />
+  </svg>
+)
+
 function App() {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({})
 
@@ -37,9 +74,15 @@ function App() {
               className="h-10 md:h-12 w-auto"
             />
           </a>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#about" className="text-sm text-[#9ca3af] hover:text-white transition-colors">About</a>
+            <a href="#focus" className="text-sm text-[#9ca3af] hover:text-white transition-colors">Focus</a>
+            <a href="#approach" className="text-sm text-[#9ca3af] hover:text-white transition-colors">Approach</a>
+            <a href="#founder" className="text-sm text-[#9ca3af] hover:text-white transition-colors">Founder</a>
+          </div>
           <a
             href="#contact"
-            className="text-sm text-[#9ca3af] hover:text-[#2DD4BF] transition-colors font-medium"
+            className="text-sm text-[#0a0a0f] bg-[#2DD4BF] hover:bg-[#14b8a6] px-4 py-2 rounded transition-colors font-medium"
           >
             Contact
           </a>
@@ -47,172 +90,430 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-16">
-        <div className={`max-w-5xl mx-auto px-6 lg:px-8 text-center ${fadeIn('hero')}`}>
-          <div className="mb-20">
+      <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-16 relative overflow-hidden">
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0a0a0f] to-[#0d1117] pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#2DD4BF]/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className={`relative max-w-5xl mx-auto px-6 lg:px-8 text-center ${fadeIn('hero')}`}>
+          <div className="mb-6">
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-48 md:h-60 lg:h-72 w-auto mx-auto"
+              className="h-32 md:h-40 lg:h-48 w-auto mx-auto"
             />
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-white leading-tight mb-8 tracking-tight">
+          <p className="text-[#2DD4BF] text-sm md:text-base tracking-[0.3em] uppercase mb-16 font-medium">
+            Peak One Holdings LLC
+          </p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-[1.15] mb-8 tracking-tight">
             Building Next-Generation Consumer Platforms in Regulated Markets
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-[#9ca3af] font-light max-w-4xl mx-auto leading-relaxed">
-            Peak One Holdings builds and partners on modern consumer platforms designed for scale, compliance, and long-term category leadership.
+          <p className="text-lg md:text-xl lg:text-2xl text-[#9ca3af] font-light max-w-4xl mx-auto leading-relaxed mb-12">
+            Peak One Holdings develops and partners on modern, compliance-centric consumer products designed for scale, long-term engagement, and category leadership.
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#about"
+              className="px-8 py-4 bg-[#2DD4BF] text-[#0a0a0f] font-semibold rounded hover:bg-[#14b8a6] transition-colors"
+            >
+              Learn More
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-4 border border-[#2DD4BF]/30 text-[#2DD4BF] font-medium rounded hover:bg-[#2DD4BF]/10 transition-colors"
+            >
+              Partner With Us
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="border-t border-[#1f2937]" />
-      </div>
+      {/* What We Do Section */}
+      <section id="whatwedo" className="py-24 md:py-32 bg-[#0d1117]">
+        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('whatwedo')}`}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="text-[#2DD4BF]">
+              <NetworkIcon />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white">What We Do</h2>
+          </div>
+          <p className="text-[#9ca3af] text-lg mb-12 max-w-3xl">
+            Peak One Holdings operates at the intersection of consumer technology and regulated markets.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                </svg>
+              </div>
+              <h3 className="text-white font-semibold mb-2">Build & Own</h3>
+              <p className="text-[#9ca3af] text-sm leading-relaxed">Build and own regulated consumer platforms designed for long-term value creation</p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                </svg>
+              </div>
+              <h3 className="text-white font-semibold mb-2">Strategic Partnership</h3>
+              <p className="text-[#9ca3af] text-sm leading-relaxed">Focus on partnership-driven growth with licensed operators and established players</p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </div>
+              <h3 className="text-white font-semibold mb-2">Compliance First</h3>
+              <p className="text-[#9ca3af] text-sm leading-relaxed">Designed for licensed operator integration with conservative compliance posture</p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                </svg>
+              </div>
+              <h3 className="text-white font-semibold mb-2">Scale-Ready</h3>
+              <p className="text-[#9ca3af] text-sm leading-relaxed">Purpose-built for scaled market adoption and category-defining outcomes</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* About Section */}
-      <section id="about" className="py-28 md:py-36">
-        <div className={`max-w-4xl mx-auto px-6 lg:px-8 ${fadeIn('about')}`}>
-          <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-[#2DD4BF] mb-10 font-medium">About</h2>
-          <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed">
-            Peak One Holdings LLC is a privately held parent company formed to build, own, and partner on high-impact consumer platforms in regulated industries. The company is designed to support long-term, platform-scale businesses — combining modern product design, disciplined execution, and partnership-first growth strategies.
-          </p>
+      <section id="about" className="py-24 md:py-32">
+        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('about')}`}>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="text-[#2DD4BF] text-sm tracking-[0.2em] uppercase mb-4 font-medium">About Peak One Holdings</p>
+              <h2 className="text-3xl md:text-4xl font-semibold text-white mb-8 leading-tight">
+                A holding company built for regulated markets
+              </h2>
+              <div className="space-y-6 text-[#9ca3af] text-lg leading-relaxed">
+                <p>
+                  Peak One Holdings LLC is a privately held parent company formed to build, own, and partner on high-impact consumer platforms in regulated industries.
+                </p>
+                <p>
+                  The company is designed to support long-term, platform-scale businesses — combining modern product design, disciplined execution, and partnership-first growth strategies.
+                </p>
+                <p>
+                  We believe the next generation of consumer platforms in regulated markets will be built through trust, transparency, and deep alignment with licensed operators.
+                </p>
+              </div>
+            </div>
+            <div className="bg-[#0d1117] rounded-2xl p-8 md:p-12 border border-[#1f2937]">
+              <h3 className="text-xl font-semibold text-white mb-6">Core Principles</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Long-term platform mindset over short-term gains</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Strategic partnerships over independent operation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Sustainable growth over aggressive expansion</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Category-defining outcomes through disciplined execution</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="border-t border-[#1f2937]" />
-      </div>
 
       {/* Current Focus Section */}
-      <section id="focus" className="py-28 md:py-36">
-        <div className={`max-w-4xl mx-auto px-6 lg:px-8 ${fadeIn('focus')}`}>
-          <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-[#2DD4BF] mb-10 font-medium">Current Focus</h2>
-          <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed">
-            Peak One Holdings is currently developing a creator-led, social consumer platform within the regulated sports and gaming ecosystem. The platform is designed to feel more like a content-driven experience than a traditional transactional product, with a strong emphasis on engagement, trust, and long-term user relationships. The product is being built privately and is intended to launch through partnerships with licensed operators.
-          </p>
+      <section id="focus" className="py-24 md:py-32 bg-[#0d1117]">
+        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('focus')}`}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="text-[#2DD4BF]">
+              <TargetIcon />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white">Current Focus</h2>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mt-12">
+            <div className="lg:col-span-2">
+              <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed mb-8">
+                Peak One Holdings is currently developing a creator-led, social consumer platform within the regulated sports and gaming ecosystem.
+              </p>
+              <p className="text-lg text-[#9ca3af] leading-relaxed mb-8">
+                The platform is designed to feel more like a content-driven experience than a traditional transactional product, with a strong emphasis on engagement, trust, and long-term user relationships.
+              </p>
+              <p className="text-lg text-[#9ca3af] leading-relaxed">
+                The product is being built privately and is intended to launch exclusively through partnerships with licensed operators. Development is focused on creating genuine value for users and partners alike.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-5">
+                <p className="text-[#2DD4BF] text-sm font-medium mb-1">Development Stage</p>
+                <p className="text-white">Private Development</p>
+              </div>
+              <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-5">
+                <p className="text-[#2DD4BF] text-sm font-medium mb-1">Go-to-Market</p>
+                <p className="text-white">Partnership-First Launch</p>
+              </div>
+              <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-5">
+                <p className="text-[#2DD4BF] text-sm font-medium mb-1">Target Partners</p>
+                <p className="text-white">Licensed Operators</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="border-t border-[#1f2937]" />
-      </div>
 
       {/* Long-Term Vision Section */}
-      <section id="vision" className="py-28 md:py-36">
-        <div className={`max-w-4xl mx-auto px-6 lg:px-8 ${fadeIn('vision')}`}>
-          <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-[#2DD4BF] mb-10 font-medium">Long-Term Vision</h2>
-          <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed">
-            Peak One Holdings is structured to support the creation of multiple platform-scale businesses over time, beginning with its flagship regulated consumer product. The company's long-term vision is to build category-defining platforms at the intersection of social engagement, technology, and regulated consumer experiences.
-          </p>
+      <section id="vision" className="py-24 md:py-32">
+        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('vision')}`}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="text-[#2DD4BF]">
+              <ChartIcon />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white">Long-Term Vision</h2>
+          </div>
+
+          <div className="max-w-4xl">
+            <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed mb-8">
+              Peak One Holdings is structured to support the creation of multiple platform-scale businesses over time, beginning with its flagship regulated consumer product.
+            </p>
+            <p className="text-lg text-[#9ca3af] leading-relaxed mb-12">
+              The company's long-term vision is to build category-defining platforms at the intersection of social engagement, technology, and regulated consumer experiences. We see an opportunity to create products that genuinely serve users while operating in full alignment with regulatory requirements and licensed partners.
+            </p>
+
+            <div className="grid sm:grid-cols-3 gap-6">
+              <div className="text-center p-6 rounded-lg bg-[#0d1117] border border-[#1f2937]">
+                <p className="text-3xl font-bold text-[#2DD4BF] mb-2">Platform</p>
+                <p className="text-[#9ca3af] text-sm">Scale businesses, not features</p>
+              </div>
+              <div className="text-center p-6 rounded-lg bg-[#0d1117] border border-[#1f2937]">
+                <p className="text-3xl font-bold text-[#2DD4BF] mb-2">Category</p>
+                <p className="text-[#9ca3af] text-sm">Defining, not competing</p>
+              </div>
+              <div className="text-center p-6 rounded-lg bg-[#0d1117] border border-[#1f2937]">
+                <p className="text-3xl font-bold text-[#2DD4BF] mb-2">Long-Term</p>
+                <p className="text-[#9ca3af] text-sm">Durable value creation</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="border-t border-[#1f2937]" />
-      </div>
 
       {/* Approach Section */}
-      <section id="approach" className="py-28 md:py-36">
-        <div className={`max-w-4xl mx-auto px-6 lg:px-8 ${fadeIn('approach')}`}>
-          <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-[#2DD4BF] mb-10 font-medium">Our Approach</h2>
-          <ul className="space-y-5">
-            <li className="flex items-start gap-4">
-              <span className="text-[#2DD4BF] mt-2">
-                <svg className="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                  <circle cx="4" cy="4" r="4" />
-                </svg>
-              </span>
-              <span className="text-xl md:text-2xl text-[#c9cdd4] font-light">Partner-first operating model</span>
-            </li>
-            <li className="flex items-start gap-4">
-              <span className="text-[#2DD4BF] mt-2">
-                <svg className="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                  <circle cx="4" cy="4" r="4" />
-                </svg>
-              </span>
-              <span className="text-xl md:text-2xl text-[#c9cdd4] font-light">Conservative, compliance-forward posture</span>
-            </li>
-            <li className="flex items-start gap-4">
-              <span className="text-[#2DD4BF] mt-2">
-                <svg className="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                  <circle cx="4" cy="4" r="4" />
-                </svg>
-              </span>
-              <span className="text-xl md:text-2xl text-[#c9cdd4] font-light">Creator-led distribution replacing paid media</span>
-            </li>
-            <li className="flex items-start gap-4">
-              <span className="text-[#2DD4BF] mt-2">
-                <svg className="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                  <circle cx="4" cy="4" r="4" />
-                </svg>
-              </span>
-              <span className="text-xl md:text-2xl text-[#c9cdd4] font-light">Emphasis on trust, transparency, and sustainability</span>
-            </li>
-            <li className="flex items-start gap-4">
-              <span className="text-[#2DD4BF] mt-2">
-                <svg className="w-2 h-2" fill="currentColor" viewBox="0 0 8 8">
-                  <circle cx="4" cy="4" r="4" />
-                </svg>
-              </span>
-              <span className="text-xl md:text-2xl text-[#c9cdd4] font-light">Long-term alignment over short-term growth tactics</span>
-            </li>
-          </ul>
+      <section id="approach" className="py-24 md:py-32 bg-[#0d1117]">
+        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('approach')}`}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="text-[#2DD4BF]">
+              <ShieldIcon />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white">Our Approach</h2>
+          </div>
+          <p className="text-[#9ca3af] text-lg mb-12 max-w-3xl">
+            Every decision at Peak One Holdings is guided by a set of principles designed for regulated markets and long-term success.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
+              <h3 className="text-white text-lg font-semibold mb-3">Partner-First Model</h3>
+              <p className="text-[#9ca3af] leading-relaxed">
+                We build for integration with licensed operators, not to compete with them. Strategic alignment over independent operation.
+              </p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
+              <h3 className="text-white text-lg font-semibold mb-3">Compliance-Forward</h3>
+              <p className="text-[#9ca3af] leading-relaxed">
+                Conservative posture on regulatory matters. Trust and transparency are non-negotiable foundations.
+              </p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
+              <h3 className="text-white text-lg font-semibold mb-3">Creator-Led Distribution</h3>
+              <p className="text-[#9ca3af] leading-relaxed">
+                Authentic, creator-driven growth replacing expensive paid media. Lower CAC through genuine engagement.
+              </p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
+              <h3 className="text-white text-lg font-semibold mb-3">Trust & Transparency</h3>
+              <p className="text-[#9ca3af] leading-relaxed">
+                Long-term value in regulated markets is built through trust. This philosophy informs every decision.
+              </p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
+              <h3 className="text-white text-lg font-semibold mb-3">Sustainable Growth</h3>
+              <p className="text-[#9ca3af] leading-relaxed">
+                Long-term alignment over short-term growth tactics. Durable business models, not temporary arbitrage.
+              </p>
+            </div>
+
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
+              <h3 className="text-white text-lg font-semibold mb-3">Disciplined Execution</h3>
+              <p className="text-[#9ca3af] leading-relaxed">
+                Category-defining outcomes require focus and discipline. We prioritize depth over breadth.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="border-t border-[#1f2937]" />
-      </div>
 
       {/* Founder Section */}
-      <section id="founder" className="py-28 md:py-36">
-        <div className={`max-w-4xl mx-auto px-6 lg:px-8 ${fadeIn('founder')}`}>
-          <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-[#2DD4BF] mb-10 font-medium">Founder</h2>
-          <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed">
-            Peak One Holdings was founded by Evan Webdale, founder and CEO of Uncle Don's Light Beer — a first-responder-owned consumer brand operating across multiple U.S. states. Evan has experience building and scaling regulated consumer products, managing partnerships, and operating within compliance-driven environments.
-          </p>
+      <section id="founder" className="py-24 md:py-32">
+        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('founder')}`}>
+          <div className="flex items-center gap-4 mb-12">
+            <div className="text-[#2DD4BF]">
+              <UserIcon />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white">Founder</h2>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            <div className="lg:col-span-2">
+              <h3 className="text-2xl md:text-3xl text-white font-semibold mb-6">Evan Webdale</h3>
+              <div className="space-y-6 text-lg text-[#9ca3af] leading-relaxed">
+                <p>
+                  Peak One Holdings was founded by Evan Webdale, founder and CEO of <span className="text-white">Uncle Don's Light Beer</span> — a first-responder-owned consumer brand operating across multiple U.S. states.
+                </p>
+                <p>
+                  Evan has experience building and scaling regulated consumer products, managing partnerships, and operating within compliance-driven environments. This background directly informs Peak One Holdings' approach to regulated markets.
+                </p>
+                <p>
+                  The company was founded with a clear thesis: the next generation of consumer platforms in regulated industries will be built through partnership, trust, and disciplined execution — not aggressive tactics that create regulatory risk.
+                </p>
+              </div>
+            </div>
+            <div className="bg-[#0d1117] rounded-xl p-8 border border-[#1f2937]">
+              <p className="text-[#2DD4BF] text-sm font-medium uppercase tracking-wider mb-4">Background</p>
+              <ul className="space-y-4 text-[#c9cdd4]">
+                <li className="flex items-start gap-3">
+                  <span className="text-[#2DD4BF] mt-1">•</span>
+                  <span>Founder & CEO, Uncle Don's Light Beer</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#2DD4BF] mt-1">•</span>
+                  <span>Multi-state regulated product operations</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#2DD4BF] mt-1">•</span>
+                  <span>Consumer brand development</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-[#2DD4BF] mt-1">•</span>
+                  <span>Partnership & distribution management</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="border-t border-[#1f2937]" />
-      </div>
-
       {/* Contact Section */}
-      <section id="contact" className="py-28 md:py-36">
-        <div className={`max-w-4xl mx-auto px-6 lg:px-8 ${fadeIn('contact')}`}>
-          <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] text-[#2DD4BF] mb-10 font-medium">Partnerships</h2>
-          <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed mb-12">
-            Peak One Holdings is currently exploring strategic partnerships with licensed sportsbook and gaming operators.
-          </p>
-          <a
-            href="mailto:evan@peakoneholdings.com"
-            className="inline-flex items-center gap-3 text-xl md:text-2xl text-white hover:text-[#2DD4BF] transition-colors font-normal group"
-          >
-            <span>evan@peakoneholdings.com</span>
-            <svg className="w-5 h-5 md:w-6 md:h-6 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+      <section id="contact" className="py-24 md:py-32 bg-[#0d1117]">
+        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('contact')}`}>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="text-[#2DD4BF]">
+              <HandshakeIcon />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white">Partnerships</h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center mt-12">
+            <div>
+              <p className="text-xl md:text-2xl text-[#c9cdd4] font-light leading-relaxed mb-6">
+                Peak One Holdings is currently exploring strategic partnerships with licensed sportsbook and gaming operators.
+              </p>
+              <p className="text-lg text-[#9ca3af] leading-relaxed mb-8">
+                We're looking for partners who share our commitment to compliance, long-term value creation, and building products that genuinely serve users. If you're a licensed operator interested in discussing potential collaboration, we'd welcome the conversation.
+              </p>
+              <a
+                href="mailto:evan@peakoneholdings.com"
+                className="inline-flex items-center gap-3 text-xl md:text-2xl text-white hover:text-[#2DD4BF] transition-colors font-medium group"
+              >
+                <span>evan@peakoneholdings.com</span>
+                <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="bg-[#0a0a0f] rounded-xl p-8 md:p-10 border border-[#1f2937]">
+              <h3 className="text-xl font-semibold text-white mb-6">Ideal Partners</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Licensed sportsbook operators</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Gaming operators seeking distribution innovation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Organizations committed to compliance-first approach</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#2DD4BF] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-[#c9cdd4]">Partners interested in long-term strategic alignment</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-16 border-t border-[#1f2937]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-[#6b7280]">
-            <img
-              src="/logo.png"
-              alt="Peak One Holdings LLC"
-              className="h-8 md:h-10 w-auto opacity-50"
-            />
-            <span>&copy; {new Date().getFullYear()} Peak One Holdings LLC. All rights reserved.</span>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <img
+                src="/logo.png"
+                alt="Peak One Holdings LLC"
+                className="h-10 w-auto"
+              />
+              <p className="text-[#6b7280] text-sm">Building next-generation consumer platforms in regulated markets.</p>
+            </div>
+            <div className="flex flex-col items-center md:items-end gap-4">
+              <a
+                href="mailto:evan@peakoneholdings.com"
+                className="text-[#9ca3af] hover:text-[#2DD4BF] transition-colors"
+              >
+                evan@peakoneholdings.com
+              </a>
+              <p className="text-[#6b7280] text-sm">&copy; {new Date().getFullYear()} Peak One Holdings LLC. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>
