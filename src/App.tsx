@@ -34,7 +34,7 @@ function App() {
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-9 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
           </a>
           <a
@@ -49,11 +49,11 @@ function App() {
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-16">
         <div className={`max-w-5xl mx-auto px-6 lg:px-8 text-center ${fadeIn('hero')}`}>
-          <div className="mb-16">
+          <div className="mb-20">
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-36 md:h-44 lg:h-52 w-auto mx-auto"
+              className="h-48 md:h-60 lg:h-72 w-auto mx-auto"
             />
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-white leading-tight mb-8 tracking-tight">
@@ -210,7 +210,7 @@ function App() {
             <img
               src="/logo.png"
               alt="Peak One Holdings LLC"
-              className="h-7 w-auto opacity-50"
+              className="h-8 md:h-10 w-auto opacity-50"
             />
             <span>&copy; {new Date().getFullYear()} Peak One Holdings LLC. All rights reserved.</span>
           </div>
