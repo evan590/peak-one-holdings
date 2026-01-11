@@ -96,32 +96,40 @@ function App() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#2DD4BF]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className={`relative max-w-5xl mx-auto px-6 lg:px-8 text-center ${fadeIn('hero')}`}>
-          <div className="mb-6">
+          <div className="mb-8">
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-32 md:h-40 lg:h-48 w-auto mx-auto"
+              className="h-36 md:h-44 lg:h-52 w-auto mx-auto"
             />
           </div>
-          <p className="text-[#2DD4BF] text-sm md:text-base tracking-[0.3em] uppercase mb-16 font-medium">
+          <p className="text-[#2DD4BF] text-sm md:text-base tracking-[0.3em] uppercase mb-20 font-medium">
             Peak One Holdings LLC
           </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-[1.15] mb-8 tracking-tight">
-            Building Next-Generation Consumer Platforms in Regulated Markets
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-[1.1] mb-10 tracking-tight">
+            Building Category-Defining Platforms<br className="hidden md:block" /> in Regulated Markets
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-[#9ca3af] font-light max-w-4xl mx-auto leading-relaxed mb-12">
-            Peak One Holdings develops and partners on modern, compliance-centric consumer products designed for scale, long-term engagement, and category leadership.
+          <p className="text-xl md:text-2xl text-[#9ca3af] font-light max-w-3xl mx-auto leading-relaxed mb-16">
+            Peak One Holdings develops and partners on modern, compliance-centric consumer products designed for scale and long-term category leadership.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          {/* Thesis Statement */}
+          <div className="max-w-3xl mx-auto mb-16 py-8 border-t border-b border-[#1f2937]">
+            <p className="text-lg md:text-xl text-[#c9cdd4] italic font-light leading-relaxed">
+              "We believe the next generation of regulated consumer platforms will be built through partnership, trust, and disciplined execution."
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
               href="#about"
-              className="px-8 py-4 bg-[#2DD4BF] text-[#0a0a0f] font-semibold rounded hover:bg-[#14b8a6] transition-colors"
+              className="px-10 py-4 bg-[#2DD4BF] text-[#0a0a0f] font-semibold rounded hover:bg-[#14b8a6] transition-colors text-lg"
             >
               Learn More
             </a>
             <a
               href="#contact"
-              className="px-8 py-4 border border-[#2DD4BF]/30 text-[#2DD4BF] font-medium rounded hover:bg-[#2DD4BF]/10 transition-colors"
+              className="px-10 py-4 border border-[#2DD4BF]/40 text-[#2DD4BF] font-medium rounded hover:bg-[#2DD4BF]/10 transition-colors text-lg"
             >
               Partner With Us
             </a>
@@ -130,64 +138,48 @@ function App() {
       </section>
 
       {/* What We Do Section */}
-      <section id="whatwedo" className="py-24 md:py-32 bg-[#0d1117]">
-        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('whatwedo')}`}>
-          <div className="flex items-center gap-4 mb-6">
-            <div className="text-[#2DD4BF]">
+      <section id="whatwedo" className="py-32 md:py-40 bg-[#0d1117]">
+        <div className={`max-w-5xl mx-auto px-6 lg:px-8 ${fadeIn('whatwedo')}`}>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2DD4BF]/10 rounded-2xl mb-6">
               <NetworkIcon />
             </div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white">What We Do</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">What We Do</h2>
+            <p className="text-[#9ca3af] text-xl max-w-2xl mx-auto leading-relaxed">
+              Peak One Holdings operates at the intersection of consumer technology and regulated markets.
+            </p>
           </div>
-          <p className="text-[#9ca3af] text-lg mb-12 max-w-3xl">
-            Peak One Holdings operates at the intersection of consumer technology and regulated markets.
-          </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                </svg>
-              </div>
-              <h3 className="text-white font-semibold mb-2">Build & Own</h3>
-              <p className="text-[#9ca3af] text-sm leading-relaxed">Build and own regulated consumer platforms designed for long-term value creation</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Build & Partner</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">Build and own regulated consumer platforms designed for long-term value creation, with a focus on partnership-driven growth alongside licensed operators.</p>
             </div>
 
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                </svg>
-              </div>
-              <h3 className="text-white font-semibold mb-2">Strategic Partnership</h3>
-              <p className="text-[#9ca3af] text-sm leading-relaxed">Focus on partnership-driven growth with licensed operators and established players</p>
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Compliance-Forward</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">Designed from the ground up for licensed operator integration with a conservative compliance posture. Trust and regulatory alignment are foundational.</p>
             </div>
 
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-                </svg>
-              </div>
-              <h3 className="text-white font-semibold mb-2">Compliance First</h3>
-              <p className="text-[#9ca3af] text-sm leading-relaxed">Designed for licensed operator integration with conservative compliance posture</p>
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Creator-Led Distribution</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">Authentic, creator-driven growth replacing expensive paid media. Lower customer acquisition costs through genuine engagement and community.</p>
             </div>
 
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-6 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-12 h-12 bg-[#2DD4BF]/10 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-[#2DD4BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
-                </svg>
-              </div>
-              <h3 className="text-white font-semibold mb-2">Scale-Ready</h3>
-              <p className="text-[#9ca3af] text-sm leading-relaxed">Purpose-built for scaled market adoption and category-defining outcomes</p>
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Built for Scale</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">Purpose-built for scaled market adoption and category-defining outcomes. Long-term platform mindset over short-term feature development.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 md:py-32">
+      <section id="about" className="py-32 md:py-40">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('about')}`}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -241,7 +233,7 @@ function App() {
       </section>
 
       {/* Current Focus Section */}
-      <section id="focus" className="py-24 md:py-32 bg-[#0d1117]">
+      <section id="focus" className="py-32 md:py-40 bg-[#0d1117]">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('focus')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
@@ -281,7 +273,7 @@ function App() {
       </section>
 
       {/* Long-Term Vision Section */}
-      <section id="vision" className="py-24 md:py-32">
+      <section id="vision" className="py-32 md:py-40">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('vision')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
@@ -317,7 +309,7 @@ function App() {
       </section>
 
       {/* Approach Section */}
-      <section id="approach" className="py-24 md:py-32 bg-[#0d1117]">
+      <section id="approach" className="py-32 md:py-40 bg-[#0d1117]">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('approach')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
@@ -329,51 +321,35 @@ function App() {
             Every decision at Peak One Holdings is guided by a set of principles designed for regulated markets and long-term success.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
-              <h3 className="text-white text-lg font-semibold mb-3">Partner-First Model</h3>
-              <p className="text-[#9ca3af] leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Partner-First Model</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">
                 We build for integration with licensed operators, not to compete with them. Strategic alignment over independent operation.
               </p>
             </div>
 
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
-              <h3 className="text-white text-lg font-semibold mb-3">Compliance-Forward</h3>
-              <p className="text-[#9ca3af] leading-relaxed">
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Compliance-Forward</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">
                 Conservative posture on regulatory matters. Trust and transparency are non-negotiable foundations.
               </p>
             </div>
 
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
-              <h3 className="text-white text-lg font-semibold mb-3">Creator-Led Distribution</h3>
-              <p className="text-[#9ca3af] leading-relaxed">
-                Authentic, creator-driven growth replacing expensive paid media. Lower CAC through genuine engagement.
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Sustainable Growth</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">
+                Long-term alignment over short-term growth tactics. Durable business models built through trust.
               </p>
             </div>
 
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
-              <h3 className="text-white text-lg font-semibold mb-3">Trust & Transparency</h3>
-              <p className="text-[#9ca3af] leading-relaxed">
-                Long-term value in regulated markets is built through trust. This philosophy informs every decision.
-              </p>
-            </div>
-
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
-              <h3 className="text-white text-lg font-semibold mb-3">Sustainable Growth</h3>
-              <p className="text-[#9ca3af] leading-relaxed">
-                Long-term alignment over short-term growth tactics. Durable business models, not temporary arbitrage.
-              </p>
-            </div>
-
-            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-lg p-8 hover:border-[#2DD4BF]/30 transition-colors">
-              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-6" />
-              <h3 className="text-white text-lg font-semibold mb-3">Disciplined Execution</h3>
-              <p className="text-[#9ca3af] leading-relaxed">
+            <div className="bg-[#0a0a0f] border border-[#1f2937] rounded-xl p-10 hover:border-[#2DD4BF]/30 transition-colors">
+              <div className="w-3 h-3 bg-[#2DD4BF] rounded-full mb-8" />
+              <h3 className="text-white text-xl font-semibold mb-4">Disciplined Execution</h3>
+              <p className="text-[#9ca3af] text-lg leading-relaxed">
                 Category-defining outcomes require focus and discipline. We prioritize depth over breadth.
               </p>
             </div>
@@ -382,7 +358,7 @@ function App() {
       </section>
 
       {/* Founder Section */}
-      <section id="founder" className="py-24 md:py-32">
+      <section id="founder" className="py-32 md:py-40">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('founder')}`}>
           <div className="flex items-center gap-4 mb-12">
             <div className="text-[#2DD4BF]">
@@ -432,7 +408,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 md:py-32 bg-[#0d1117]">
+      <section id="contact" className="py-32 md:py-40 bg-[#0d1117]">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('contact')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
