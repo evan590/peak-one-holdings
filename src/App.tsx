@@ -30,12 +30,12 @@ function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/90 backdrop-blur-sm border-b border-[#1f2937]/50">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#hero" className="flex items-center gap-3">
-            {/* Logo placeholder */}
-            <div className="w-8 h-8 rounded bg-[#2DD4BF]/20 border border-[#2DD4BF]/30 flex items-center justify-center">
-              <span className="text-[#2DD4BF] text-sm font-semibold">P1</span>
-            </div>
-            <span className="text-white font-medium tracking-tight">Peak One Holdings</span>
+          <a href="#hero" className="flex items-center">
+            <img
+              src="/logo.png"
+              alt="Peak One Holdings"
+              className="h-8 w-auto"
+            />
           </a>
           <a
             href="#contact"
@@ -49,10 +49,11 @@ function App() {
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center pt-20">
         <div className={`max-w-4xl mx-auto px-6 text-center ${fadeIn('hero')}`}>
-          {/* Logo placeholder - larger version for hero */}
-          <div className="w-20 h-20 mx-auto mb-10 rounded-xl bg-[#2DD4BF]/10 border border-[#2DD4BF]/20 flex items-center justify-center">
-            <span className="text-[#2DD4BF] text-2xl font-semibold">P1</span>
-          </div>
+          <img
+            src="/logo.png"
+            alt="Peak One Holdings"
+            className="h-24 md:h-32 w-auto mx-auto mb-12"
+          />
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
             Building next-generation consumer platforms in regulated markets.
           </h1>
@@ -233,12 +234,11 @@ function App() {
       <footer className="py-12 border-t border-[#1f2937]">
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#6b7280]">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 rounded bg-[#2DD4BF]/20 border border-[#2DD4BF]/30 flex items-center justify-center">
-                <span className="text-[#2DD4BF] text-xs font-semibold">P1</span>
-              </div>
-              <span>Peak One Holdings LLC</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Peak One Holdings LLC"
+              className="h-6 w-auto opacity-60"
+            />
             <span>&copy; {new Date().getFullYear()} All rights reserved.</span>
           </div>
         </div>
