@@ -96,14 +96,14 @@ function App() {
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#2DD4BF]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className={`relative max-w-5xl mx-auto px-6 lg:px-8 text-center ${fadeIn('hero')}`}>
-          <div className="mb-8">
+          <div className="mb-12 mt-8">
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-36 md:h-44 lg:h-52 w-auto mx-auto"
+              className="h-40 md:h-52 lg:h-64 w-auto mx-auto"
             />
           </div>
-          <p className="text-[#2DD4BF] text-sm md:text-base tracking-[0.3em] uppercase mb-20 font-medium">
+          <p className="text-[#2DD4BF] text-sm md:text-base tracking-[0.3em] uppercase mb-16 font-medium">
             Peak One Holdings LLC
           </p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-[1.1] mb-10 tracking-tight">
@@ -120,7 +120,7 @@ function App() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
             <a
               href="#about"
               className="px-10 py-4 bg-[#2DD4BF] text-[#0a0a0f] font-semibold rounded hover:bg-[#14b8a6] transition-colors text-lg"
@@ -134,6 +134,11 @@ function App() {
               Partner With Us
             </a>
           </div>
+
+          {/* Credibility Anchor */}
+          <p className="text-[#6b7280] text-sm tracking-wider">
+            Privately held · Partnership-led · Compliance-first
+          </p>
         </div>
       </section>
 
@@ -233,7 +238,7 @@ function App() {
       </section>
 
       {/* Current Focus Section */}
-      <section id="focus" className="py-32 md:py-40 bg-[#0d1117]">
+      <section id="focus" className="py-36 md:py-48 bg-[#0d1117]">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('focus')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
@@ -273,7 +278,7 @@ function App() {
       </section>
 
       {/* Long-Term Vision Section */}
-      <section id="vision" className="py-32 md:py-40">
+      <section id="vision" className="py-36 md:py-48">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('vision')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
@@ -358,7 +363,7 @@ function App() {
       </section>
 
       {/* Founder Section */}
-      <section id="founder" className="py-32 md:py-40">
+      <section id="founder" className="py-36 md:py-48">
         <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('founder')}`}>
           <div className="flex items-center gap-4 mb-12">
             <div className="text-[#2DD4BF]">
@@ -470,8 +475,13 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 border-t border-[#1f2937]">
+      <footer className="py-20 border-t border-[#1f2937]">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          {/* Credibility Line */}
+          <p className="text-center text-[#4b5563] text-sm tracking-wider mb-12">
+            Built for long-term alignment with licensed operators
+          </p>
+
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex flex-col items-center md:items-start gap-4">
               <img
@@ -479,7 +489,7 @@ function App() {
                 alt="Peak One Holdings LLC"
                 className="h-10 w-auto"
               />
-              <p className="text-[#6b7280] text-sm">Building next-generation consumer platforms in regulated markets.</p>
+              <p className="text-[#6b7280] text-sm">Building category-defining platforms in regulated markets.</p>
             </div>
             <div className="flex flex-col items-center md:items-end gap-4">
               <a
