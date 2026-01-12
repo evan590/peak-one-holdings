@@ -71,7 +71,7 @@ function App() {
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-10 md:h-12 w-auto"
+              className="h-8 md:h-10 w-auto"
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -91,25 +91,26 @@ function App() {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center pt-20 pb-16 relative overflow-hidden">
-        {/* Subtle gradient background */}
+        {/* Depth gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0a0a0f] to-[#0d1117] pointer-events-none" />
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#2DD4BF]/5 rounded-full blur-3xl pointer-events-none" />
+        {/* Vignette effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#0a0a0f_70%)] pointer-events-none" />
+        {/* Subtle teal glow */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-[#2DD4BF]/[0.03] rounded-full blur-3xl pointer-events-none" />
 
-        <div className={`relative max-w-5xl mx-auto px-6 lg:px-8 text-center ${fadeIn('hero')}`}>
-          <div className="mb-12 mt-8">
+        <div className={`relative max-w-6xl mx-auto px-6 lg:px-8 text-center ${fadeIn('hero')}`}>
+          {/* Large commanding logo */}
+          <div className="mb-20 mt-4">
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-40 md:h-52 lg:h-64 w-auto mx-auto"
+              className="w-auto max-w-[280px] md:max-w-[400px] lg:max-w-[520px] xl:max-w-[600px] mx-auto"
             />
           </div>
-          <p className="text-[#2DD4BF] text-sm md:text-base tracking-[0.3em] uppercase mb-16 font-medium">
-            Peak One Holdings LLC
-          </p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-[1.1] mb-10 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.05] mb-8 tracking-tight">
             Building Category-Defining Platforms<br className="hidden md:block" /> in Regulated Markets
           </h1>
-          <p className="text-xl md:text-2xl text-[#9ca3af] font-light max-w-3xl mx-auto leading-relaxed mb-16">
+          <p className="text-lg md:text-xl lg:text-2xl text-[#7a8290] font-light max-w-3xl mx-auto leading-relaxed mb-14">
             Peak One Holdings develops and partners on modern, compliance-centric consumer products designed for scale and long-term category leadership.
           </p>
 
@@ -143,8 +144,10 @@ function App() {
       </section>
 
       {/* What We Do Section */}
-      <section id="whatwedo" className="py-32 md:py-40 bg-[#0d1117]">
-        <div className={`max-w-5xl mx-auto px-6 lg:px-8 ${fadeIn('whatwedo')}`}>
+      <section id="whatwedo" className="py-32 md:py-40 bg-[#0d1117] relative">
+        {/* Top vignette */}
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#0a0a0f] to-transparent pointer-events-none" />
+        <div className={`relative max-w-5xl mx-auto px-6 lg:px-8 ${fadeIn('whatwedo')}`}>
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-[#2DD4BF]/10 rounded-2xl mb-6">
               <NetworkIcon />
@@ -184,8 +187,10 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32 md:py-40">
-        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('about')}`}>
+      <section id="about" className="py-32 md:py-40 relative">
+        {/* Subtle radial vignette */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,#0d1117_0%,transparent_50%)] pointer-events-none" />
+        <div className={`relative max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('about')}`}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-[#2DD4BF] text-sm tracking-[0.2em] uppercase mb-4 font-medium">About Peak One Holdings</p>
@@ -238,8 +243,10 @@ function App() {
       </section>
 
       {/* Current Focus Section */}
-      <section id="focus" className="py-36 md:py-48 bg-[#0d1117]">
-        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('focus')}`}>
+      <section id="focus" className="py-36 md:py-48 bg-[#0d1117] relative">
+        {/* Depth vignette from edges */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#080810_100%)] pointer-events-none" />
+        <div className={`relative max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('focus')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
               <TargetIcon />
@@ -278,8 +285,10 @@ function App() {
       </section>
 
       {/* Long-Term Vision Section */}
-      <section id="vision" className="py-36 md:py-48">
-        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('vision')}`}>
+      <section id="vision" className="py-36 md:py-48 relative">
+        {/* Subtle top-down vignette */}
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,#0d1117_0%,transparent_15%,transparent_85%,#0d1117_100%)] pointer-events-none" />
+        <div className={`relative max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('vision')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
               <ChartIcon />
@@ -314,8 +323,11 @@ function App() {
       </section>
 
       {/* Approach Section */}
-      <section id="approach" className="py-32 md:py-40 bg-[#0d1117]">
-        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('approach')}`}>
+      <section id="approach" className="py-32 md:py-40 bg-[#0d1117] relative">
+        {/* Corner vignettes for depth */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,#0a0a0f_0%,transparent_50%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,#0a0a0f_0%,transparent_50%)] pointer-events-none" />
+        <div className={`relative max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('approach')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
               <ShieldIcon />
@@ -363,8 +375,10 @@ function App() {
       </section>
 
       {/* Founder Section */}
-      <section id="founder" className="py-36 md:py-48">
-        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('founder')}`}>
+      <section id="founder" className="py-36 md:py-48 relative">
+        {/* Subtle centered glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#0d1117_0%,transparent_60%)] pointer-events-none" />
+        <div className={`relative max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('founder')}`}>
           <div className="flex items-center gap-4 mb-12">
             <div className="text-[#2DD4BF]">
               <UserIcon />
@@ -413,8 +427,10 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-32 md:py-40 bg-[#0d1117]">
-        <div className={`max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('contact')}`}>
+      <section id="contact" className="py-32 md:py-40 bg-[#0d1117] relative">
+        {/* Bottom fade to footer */}
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a0a0f] to-transparent pointer-events-none" />
+        <div className={`relative max-w-6xl mx-auto px-6 lg:px-8 ${fadeIn('contact')}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="text-[#2DD4BF]">
               <HandshakeIcon />
@@ -487,7 +503,7 @@ function App() {
               <img
                 src="/logo.png"
                 alt="Peak One Holdings LLC"
-                className="h-10 w-auto"
+                className="h-8 w-auto max-w-[200px]"
               />
               <p className="text-[#6b7280] text-sm">Building category-defining platforms in regulated markets.</p>
             </div>
