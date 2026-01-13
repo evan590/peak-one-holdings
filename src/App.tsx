@@ -71,7 +71,7 @@ function App() {
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="w-[130px] md:w-[150px]"
+              className="w-[160px] md:w-[190px]"
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -503,7 +503,7 @@ function App() {
               <img
                 src="/logo.png"
                 alt="Peak One Holdings LLC"
-                className="w-[130px]"
+                className="w-[155px]"
               />
               <p className="text-[#6b7280] text-sm">Building category-defining platforms in regulated markets.</p>
             </div>
