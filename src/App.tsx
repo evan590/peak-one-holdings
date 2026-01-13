@@ -71,7 +71,7 @@ function App() {
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="h-8 md:h-10 w-auto"
+              className="w-[130px] md:w-[150px]"
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -104,7 +104,7 @@ function App() {
             <img
               src="/logo.png"
               alt="Peak One Holdings"
-              className="w-auto max-w-[280px] md:max-w-[400px] lg:max-w-[520px] xl:max-w-[600px] mx-auto"
+              className="w-auto max-w-[320px] md:max-w-[450px] lg:max-w-[580px] xl:max-w-[680px] mx-auto"
             />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.05] mb-8 tracking-tight">
@@ -503,7 +503,7 @@ function App() {
               <img
                 src="/logo.png"
                 alt="Peak One Holdings LLC"
-                className="h-8 w-auto max-w-[200px]"
+                className="w-[130px]"
               />
               <p className="text-[#6b7280] text-sm">Building category-defining platforms in regulated markets.</p>
             </div>
