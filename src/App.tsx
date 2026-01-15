@@ -503,7 +503,7 @@ function App() {
               <img
                 src="/logo.png"
                 alt="Peak One Holdings LLC"
-                className="w-[155px]"
+                className="w-[220px]"
               />
               <p className="text-[#6b7280] text-sm">Building category-defining platforms in regulated markets.</p>
             </div>
