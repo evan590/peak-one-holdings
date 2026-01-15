@@ -69,9 +69,9 @@ function App() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
           <a href="#hero" className="flex items-center">
             <img
-              src="/logo.png"
+              src="/logo-no-llc.png"
               alt="Peak One Holdings"
-              className="w-[175px] md:w-[210px]"
+              className="w-[190px] md:w-[230px]"
             />
           </a>
           <div className="hidden md:flex items-center gap-8">
@@ -102,9 +102,9 @@ function App() {
           {/* Large commanding logo */}
           <div className="mb-20 mt-4">
             <img
-              src="/logo.png"
+              src="/logo-no-llc.png"
               alt="Peak One Holdings"
-              className="w-auto max-w-[320px] md:max-w-[450px] lg:max-w-[580px] xl:max-w-[680px] mx-auto"
+              className="w-auto max-w-[360px] md:max-w-[500px] lg:max-w-[650px] xl:max-w-[750px] mx-auto"
             />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-white leading-[1.05] mb-8 tracking-tight">
