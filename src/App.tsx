@@ -447,10 +447,10 @@ function App() {
                 We're looking for partners who share our commitment to compliance, long-term value creation, and building products that genuinely serve users. If you're a licensed operator interested in discussing potential collaboration, we'd welcome the conversation.
               </p>
               <a
-                href="mailto:evan@peakoneholdings.com"
+                href="mailto:info@peakoneholdings.com"
                 className="inline-flex items-center gap-3 text-xl md:text-2xl text-white hover:text-[#2DD4BF] transition-colors font-medium group"
               >
-                <span>evan@peakoneholdings.com</span>
+                <span>info@peakoneholdings.com</span>
                 <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -509,10 +509,10 @@ function App() {
             </div>
             <div className="flex flex-col items-center md:items-end gap-4">
               <a
-                href="mailto:evan@peakoneholdings.com"
+                href="mailto:info@peakoneholdings.com"
                 className="text-[#9ca3af] hover:text-[#2DD4BF] transition-colors"
               >
-                evan@peakoneholdings.com
+                info@peakoneholdings.com
               </a>
               <p className="text-[#6b7280] text-sm">&copy; {new Date().getFullYear()} Peak One Holdings LLC. All rights reserved.</p>
             </div>
